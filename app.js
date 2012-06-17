@@ -21,8 +21,8 @@ app.configure(function(){
   app.register('.mustache', mustacheCompiler);
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+  app.use(app.router);
 });
 
 // app.enable("jsonp callback");
@@ -40,6 +40,7 @@ app.get('/', routes.index);
 app.get('/categories', api.categories);
 app.get('/activities/:catId', api.activities);
 app.get('/activities/:catId/:itemId', api.details);
+app.get('/*', routes.error404);
 
 app.listen(3000, function() {
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

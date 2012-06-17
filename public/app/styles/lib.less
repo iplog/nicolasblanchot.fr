@@ -1,0 +1,37 @@
+@red: #ff0000;
+@backgroundColor : grey;
+@mainColor : white;
+
+@purple : rgb(147, 91, 170);
+
+
+.viewWrapper {
+  width: 320px !important;
+  height: 460px !important;
+  background: url('../images/background.png') black no-repeat top left;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.navigationBar {
+  width: 320px;
+  height: 48px;
+  background: url('../images/navigationBar.png') no-repeat top left;
+}
+.profileButton {
+  position: relative;
+  top: 8px;
+  left: 282px;
+  width: 30px;
+  height: 30px;
+  background: url('../images/navigationButtonProfile.png') no-repeat top left;
+}
+.backButton {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 30px;
+  height: 30px;
+  background: url('../images/navigationButtonBack.png') no-repeat top left;
+}
+.backButton:active {
+  background: url('../images/navigationButtonBackActive.png') no-repeat top left;
+}

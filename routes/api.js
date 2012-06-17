@@ -38,6 +38,7 @@ exports.activities = function(req, res) {
  */
 exports.details = function(req, res) {
   var keyToGet = 'cat' + req.params.catId + ':item' + req.params.itemId;
+  console.log(keyToGet);
   redis.get(keyToGet, function(err, value) {
     var data;
     if (err || !value) {
