@@ -1,14 +1,25 @@
 var redis = require('./redis').inst;
 
 exports.createData = function() {
-  var categories = [
-    'Professional Experience',
-    'Education',
-    'Computer Skills',
-    'Languages',
-    'Extracurricular activities',
-    'About Me'
-  ];
+  var categories = [{
+    id : 0,
+    category : 'Professional Experience'
+  }, {
+    id : 1,
+    category : 'Education'
+  }, {
+    id : 2,
+    category : 'Computer Skills'
+  }, {
+    id : 3,
+    category : 'Languages'
+  }, {
+    id : 4,
+    category : 'Extracurricular activities'
+  }, {
+    id : 5,
+    category : 'About Me'
+  }];
   redis.set('categories', JSON.stringify(categories));
 
   var cat0 = [

@@ -7,15 +7,19 @@ define([
 ) {
   var Router = Backbone.Router.extend({
     routes : {
-      '' : 'categories'
+      '' : 'categories',
+      'category/:id' : 'category'
     },
     categories : function() {
       if (!plogApp.CategoriesView) {
         plogApp.categoriesView = new CategoriesView({
-          collection : Categories
+          collection : new Categories()
         });
       }
       return plogApp.categoriesView.render();
+    },
+    category : function(id) {
+      console.log(id);
     }
   });
   return Router;

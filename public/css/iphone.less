@@ -1,4 +1,4 @@
-@import "../app/styles/lib";
+@import "../app/styles/colors";
 
 * {
   margin: 0px;
@@ -10,8 +10,6 @@
   border-bottom: 1px solid #2D3642;
   height: 45px;
   padding: 10px;
-  position: relative;
-
 }
 
 body {
@@ -23,20 +21,10 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-}
-body > div {
   background: url("../images/background.gif");
   background-repeat: no-repeat;
   background-color: @backgroundColor;
   color: @mainColor;
-}
-
-body > div {
-  display: block;
-  left: 0px;
-  /*min-height: 100%;*/
-  position: absolute;
-  width: 100%;
 }
 
 a {
@@ -73,7 +61,7 @@ body.landscape .toolbar > h1 {
 }
 
 ul {
-/*  background: white;
+  background: white;
   border: 1px solid #B4B4B4;
   border-bottom-left-radius: 8px 8px;
   border-bottom-right-radius: 8px 8px;
@@ -82,7 +70,7 @@ ul {
   color: black;
   font: normal normal bold 17px/normal Helvetica;
   margin: 15px 10px 17px;
-  padding: 0px;*/
+  padding: 0px;
 }
 
 ul li {
@@ -92,7 +80,7 @@ ul li {
   color: #666;
   list-style-type: none;
   div {
-    /*padding: 10px;*/
+    padding: 10px;
     overflow: hidden;
     &.arrow {
       background-image: url("../images/arrow.png");

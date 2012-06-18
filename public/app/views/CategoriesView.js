@@ -13,11 +13,32 @@ define([
     events : {},
     template : Tmpl,
     initialize : function() {
-      _.bindAll(this, 'render');
+      _.bindAll(this, 'render', 'getCategoriesSuccess', 'appendCategory');
     },
     render : function() {
-      $(this.el).html(Mustache.to_html(this.template));
+      var data = {
+        title : 'My resume'
+      };
+      $(this.el).html(Mustache.to_html(this.template, data));
+      this.collection.fetch({
+        success: this.getCategoriesSuccess,
+        error: this.getCategoriesError
+      });
       return this;
+    },
+    getCategoriesSuccess : function(collection) {
+      this.docFragment = document.createDocumentFragment();
+      _.each(collection.models, this.appendCategory);
+      this.$el.find('ul').append(this.docFragment);
+    },
+    getCategoriesError : function() {
+      alert('Cannot connect to server');
+    },
+    appendCategory : function(cat, ind) {
+      var view = new CategoryView({
+        model : cat
+      });
+      this.docFragment.appendChild(view.render().el);
     }
   });
 });

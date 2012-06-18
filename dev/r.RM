@@ -1,0 +1,5 @@
+# from /Sites/backbone/app run
+
+# node ../dev/r.js -o name=main out=main-built.js baseUrl=. paths.text=../js/requirejs/text paths.order=../js/requirejs/order
+
+node ../dev/r.js -o app.build.js name=main out=main-built.js baseUrl=.

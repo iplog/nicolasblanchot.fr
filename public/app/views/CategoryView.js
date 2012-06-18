@@ -1,5 +1,5 @@
 define([
-  'text!templates/CategoriesTmpl.html',
+  'text!templates/CategoryTmpl.html',
   'views/CategoryView'
 ], function(
   Tmpl,
@@ -16,13 +16,13 @@ define([
       _.bindAll(this, 'render', 'goToDetails');
     },
     render : function() {
-      $(this.el).html(Mustache.to_html(this.template));
+      $(this.el).html(Mustache.to_html(this.template, this.model.attributes));
       return this;
     },
     goToDetails : function(evt) {
       evt.preventDefault();
-      console.log(plop);
+      plogApp.router.navigate('category/' + this.model.attributes.id, true);
+      return false;
     }
-
   });
 });
