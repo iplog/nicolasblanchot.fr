@@ -45,7 +45,7 @@ exports.createData = function() {
       link : true
     }, {
       date : 'Jul 2008 - Dec 2008',
-      description : 'Mazars, Audit and Advisory company, IT Department – Paris, France',
+      title : 'Mazars, Audit and Advisory company, IT Department – Paris, France',
       link : true
     }
   ];

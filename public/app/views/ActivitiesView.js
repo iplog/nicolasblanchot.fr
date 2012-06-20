@@ -1,49 +1,53 @@
 define([
-  'text!templates/CategoriesTmpl.html',
-  'views/CategoryView'
+  'text!templates/ActivitiesTmpl.html',
+  'views/ActivityView'
 ], function(
   Tmpl,
-  CategoryView
+  ActivityView
 ) {
   return Backbone.View.extend({
     el: 'body',
     tagName : 'div',
-    id : 'categories',
+    id : 'activities',
     className : 'viewWrapper',
     events : {},
     template : Tmpl,
     initialize : function() {
-      _.bindAll(this, 'render', 'getCategoriesSuccess', 'appendCategory');
+      _.bindAll(this, 'render', 'getActivitiesSuccess', 'appendActivity');
     },
     render : function() {
       var data = {
-        title : 'My resume'
+        title : this.options.title
       };
       $(this.el).html(Mustache.to_html(this.template, data));
       $.setupScroll(this.$el);
       if (this.collection.length === 0) {
         this.collection.fetch({
-          success: this.getCategoriesSuccess,
-          error: this.getCategoriesError
+          data : {
+            catId : this.options.catId
+          },
+          success: this.getActivitiesSuccess,
+          error: this.getActivitiesError
         });
       } else {
-        this.getCategoriesSuccess(this.collection);
+        this.getActivitiesSuccess(this.collection);
       }
-
       return this;
     },
-    getCategoriesSuccess : function(collection) {
+    getActivitiesSuccess : function(collection) {
       this.docFragment = document.createDocumentFragment();
-      _.each(collection.models, this.appendCategory);
+      _.each(collection.models, this.appendActivity);
       this.$el.find('ul').append(this.docFragment);
       $.refreshScroll(this.$el);
     },
-    getCategoriesError : function() {
+    getActivitiesError : function() {
       alert('Cannot connect to server');
     },
-    appendCategory : function(cat, ind) {
-      var view = new CategoryView({
-        model : cat
+    appendActivity : function(activity, ind) {
+      var className = (activity.get('link')) ? 'arrow' : '';
+      var view = new ActivityView({
+        model : activity,
+        className : className
       });
       this.docFragment.appendChild(view.render().el);
     }

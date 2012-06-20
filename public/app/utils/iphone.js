@@ -12,7 +12,7 @@
 
       return $('body');
     };
-    $.setupIScroll = function(element) {
+    $.setupScroll = function(element) {
       var scrollable;
       if (element == null) {
         element = null;
@@ -33,7 +33,6 @@
           setWrapperHeight(element);
           scroller = new iScroll(scrollable);
         }, 0);
-
         return scroller;
       }
     };
@@ -47,7 +46,7 @@
     function setWrapperHeight(element) {
       var height;
       height = windowHeight;
-      height -= _.reduce(element.find('.navigationBar'), function(h, elt) {
+      height -= _.reduce(element.find('.toolbar'), function(h, elt) {
         return h += $(elt).height();
       }, 0);
       return element.find(".wrapper").css("height", height + "px");

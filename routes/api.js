@@ -18,7 +18,7 @@ exports.categories = function(req, res) {
  * GET activities for a category.
  */
 exports.activities = function(req, res) {
-  var keyToGet = 'cat' + req.params.catId;
+  var keyToGet = 'cat' + req.query.catId;
   redis.get(keyToGet, function(err, value) {
     var data;
     if (err || !value) {

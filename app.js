@@ -38,8 +38,8 @@ app.configure('production', function(){
 // Routes
 app.get('/', routes.index);
 app.get('/categories', api.categories);
-app.get('/activities/:catId', api.activities);
-app.get('/activities/:catId/:itemId', api.details);
+app.get('/activities', api.activities);
+app.get('/details', api.details);
 app.get('/*', routes.error404);
 
 app.listen(3000, function() {

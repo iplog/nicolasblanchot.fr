@@ -1,11 +1,11 @@
 define([
-  'text!templates/CategoryTmpl.html'
+  'text!templates/ActivityTmpl.html'
 ], function(
   Tmpl
 ) {
   return Backbone.View.extend({
     tagName : 'li',
-    className : 'arrow',
+    className : '',
     events : {
       'click' : 'goToDetails'
     },
@@ -19,7 +19,7 @@ define([
     },
     goToDetails : function(evt) {
       evt.preventDefault();
-      plogApp.router.navigate('category/' + this.model.id, true);
+      // plogApp.router.navigate('activity/' + this.model.attributes.id, true);
       return false;
     }
   });
