@@ -10,7 +10,9 @@ define([
     tagName : 'div',
     id : 'activities',
     className : 'viewWrapper',
-    events : {},
+    events : {
+      'click .back' : 'back'
+    },
     template : Tmpl,
     initialize : function() {
       _.bindAll(this, 'render', 'getActivitiesSuccess', 'appendActivity');
@@ -48,6 +50,11 @@ define([
         model : activity
       });
       this.docFragment.appendChild(view.render().el);
+    },
+    back : function(evt) {
+      evt.preventDefault();
+      window.history.back();
+      return false;
     }
   });
 });

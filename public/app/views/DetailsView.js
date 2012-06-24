@@ -50,6 +50,11 @@ define([
         model : detail
       });
       this.docFragment.appendChild(view.render().el);
+    },
+    back : function(evt) {
+      evt.preventDefault();
+      window.history.back();
+      return false;
     }
   });
 });
