@@ -36,7 +36,8 @@ app.configure('production', function(){
 });
 
 // Routes
-app.get('/', routes.index);
+app.get('/', routes.underConstruction);
+app.get('/inprogress', routes.index);
 app.get('/categories', api.categories);
 app.get('/activities', api.activities);
 app.get('/details', api.details);
