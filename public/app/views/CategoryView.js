@@ -19,7 +19,7 @@ define([
     },
     goToDetails : function(evt) {
       evt.preventDefault();
-      plogApp.router.navigate('category/' + this.model.id, true);
+      plogApp.router.navigate('activities/' + this.model.id, true);
       return false;
     }
   });

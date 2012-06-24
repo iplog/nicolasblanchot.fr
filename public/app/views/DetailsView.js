@@ -1,19 +1,19 @@
 define([
-  'text!templates/ActivitiesTmpl.html',
-  'views/ActivityView'
+  'text!templates/DetailsTmpl.html',
+  'views/DetailView'
 ], function(
   Tmpl,
-  ActivityView
+  DetailView
 ) {
   return Backbone.View.extend({
     el: 'body',
     tagName : 'div',
-    id : 'activities',
+    id : 'details',
     className : 'viewWrapper',
     events : {},
     template : Tmpl,
     initialize : function() {
-      _.bindAll(this, 'render', 'getActivitiesSuccess', 'appendActivity');
+      _.bindAll(this, 'render', 'getDetailsSuccess', 'appendDetail');
     },
     render : function() {
       var data = {
@@ -24,28 +24,30 @@ define([
       if (this.collection.length === 0) {
         this.collection.fetch({
           data : {
-            catId : this.options.catId
+            activityId : this.options.activityId
           },
-          success: this.getActivitiesSuccess,
-          error: this.getActivitiesError
+          success: this.getDetailsSuccess,
+          error: this.getDetailsError
         });
       } else {
         this.getActivitiesSuccess(this.collection);
       }
       return this;
     },
-    getActivitiesSuccess : function(collection) {
+    getDetailsSuccess : function(collection) {
       this.docFragment = document.createDocumentFragment();
-      _.each(collection.models, this.appendActivity);
+      console.log(collection);
+
+      _.each(collection.models, this.appendDetail);
       this.$el.find('ul').append(this.docFragment);
       $.refreshScroll(this.$el);
     },
-    getActivitiesError : function() {
+    getDetailsError : function() {
       alert('Cannot connect to server');
     },
-    appendActivity : function(activity, ind) {
-      var view = new ActivityView({
-        model : activity
+    appendDetail : function(detail, ind) {
+      var view = new DetailView({
+        model : detail
       });
       this.docFragment.appendChild(view.render().el);
     }
