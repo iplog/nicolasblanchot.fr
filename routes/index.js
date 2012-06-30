@@ -24,7 +24,8 @@ exports.error404 = function(req, res) {
       host : req.headers.host,
       path : req.params[0]
     },
-    layout : 'error_layout'
+    layout : 'error_layout',
+    status :404
   };
   res.render('error404', data);
 };
