@@ -14,17 +14,17 @@
     };
     $.setupScroll = function(element) {
       var scrollable;
-      if (element == null) {
+      if (!element) {
         element = null;
       }
-      if (typeof iScroll === "undefined") {
+      if (typeof iScroll === 'undefined') {
         return;
       }
       if (scroller) {
         scroller.destroy();
         scroller = null;
       }
-      if (element == null) {
+      if (!element) {
         element = $('body > div:first-child');
       }
       scrollable = element.find('.wrapper')[0];
@@ -38,18 +38,19 @@
     };
     $.refreshScroll = function() {
       setTimeout(function() {
-        if (scroller) scroller.refresh();
-        else $.refreshScroll();
-      }, 10);
-
+        if (scroller) {
+          scroller.refresh();
+        } else {
+          $.setupScroll();
+        }
+      }, 0);
     };
     function setWrapperHeight(element) {
-      var height;
-      height = windowHeight;
+      var height = windowHeight;
       height -= _.reduce(element.find('.toolbar'), function(h, elt) {
-        return h += $(elt).height();
+        return h += $(elt).outerHeight();
       }, 0);
-      return element.find(".wrapper").css("height", height + "px");
+      return element.find('.wrapper').css('height', height + 'px');
     }
   })(jQuery);
 }).call(this);
