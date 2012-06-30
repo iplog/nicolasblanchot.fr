@@ -1,10 +1,10 @@
 // Require.js config, alias and path
 require.config({
-  paths: {
-    text: '../js/requirejs/text',
-    domReady: '../js/requirejs/domReady'
+  paths : {
+    text : '../js/requirejs/text',
+    domReady : '../js/requirejs/domReady'
   },
-  baseUrl: "./app"
+  baseUrl : "./app"
 });
 
 require([

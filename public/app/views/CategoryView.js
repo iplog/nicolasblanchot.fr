@@ -14,7 +14,7 @@ define([
       _.bindAll(this, 'render', 'goToDetails');
     },
     render : function() {
-      $(this.el).html(Mustache.to_html(this.template, this.model.attributes));
+      $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
       return this;
     },
     goToDetails : function(evt) {

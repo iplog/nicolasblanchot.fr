@@ -10,9 +10,7 @@ define([
     tagName : 'div',
     id : 'activities',
     className : 'viewWrapper',
-    events : {
-      'click .back' : 'back'
-    },
+    events : {},
     template : Tmpl,
     initialize : function() {
       _.bindAll(this, 'render', 'getActivitiesSuccess', 'appendActivity');
@@ -34,6 +32,10 @@ define([
       } else {
         this.getActivitiesSuccess(this.collection);
       }
+
+      // create a fast back button
+      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
+
       return this;
     },
     getActivitiesSuccess : function(collection) {

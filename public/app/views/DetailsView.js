@@ -17,7 +17,8 @@ define([
     },
     render : function() {
       var data = {
-        title : this.options.title
+        title : this.options.title,
+        description : this.options.description
       };
       $(this.el).html(Mustache.to_html(this.template, data));
       $.setupScroll(this.$el);
@@ -32,11 +33,14 @@ define([
       } else {
         this.getActivitiesSuccess(this.collection);
       }
+
+      // create a fast back button
+      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
+
       return this;
     },
     getDetailsSuccess : function(collection) {
       this.docFragment = document.createDocumentFragment();
-      console.log(collection);
 
       _.each(collection.models, this.appendDetail);
       this.$el.find('ul').append(this.docFragment);
