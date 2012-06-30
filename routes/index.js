@@ -1,3 +1,4 @@
+var phoneRgx = /android.+mobile|bada\/|blackberry|iemobile|ip(hone|od)|kindle|opera m(ob|in)i|palm( os)?|phone|windows (ce|phone)/i;
 /**
  * GET home page.
  */
@@ -6,9 +7,13 @@ exports.index = function(req, res) {
     locals : {
       title : 'Nicolas Blanchot Resume'
     }
-
   };
-  if (!req.query['no_check']) {
+
+  // check if classic smartphone
+  var isSmartphone = phoneRgx.test(req.headers['user-agent'].toLowerCase());
+  var loadFullscreen = !isSmartphone && !req.query['no_check'];
+
+  if (loadFullscreen) {
     data.layout = 'demo_layout';
   }
   res.render('index', data);
