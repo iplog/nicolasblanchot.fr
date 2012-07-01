@@ -43,6 +43,8 @@ app.get('/activities', api.activities);
 app.get('/details', api.details);
 app.get('/*', routes.error404);
 
+global.isProd = !(!process.env.PORT);
+
 var port = process.env.PORT || 3000;
 
 app.listen(port, function() {

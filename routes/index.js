@@ -6,7 +6,8 @@ var phoneRgx = /android.+mobile|bada\/|blackberry|iemobile|ip(hone|od)|kindle|op
 exports.index = function(req, res) {
   var data = {
     locals : {
-      title : 'My Resume'
+      title : 'My Resume',
+      isProd : global.isProd
     }
   };
 
@@ -17,6 +18,7 @@ exports.index = function(req, res) {
   if (loadFullscreen) {
     data.layout = 'demo_layout';
   }
+
   res.render('index', data);
 };
 /**
@@ -41,7 +43,8 @@ exports.error404 = function(req, res) {
 exports.underConstruction = function(req, res) {
   var data = {
     locals : {
-      title : 'underConstruct'
+      title : 'Under Construction',
+      addAnalytics : global.isProd
     },
     layout : 'error_layout'
   };
