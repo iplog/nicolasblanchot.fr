@@ -6,7 +6,7 @@ define([
   DetailView
 ) {
   return Backbone.View.extend({
-    el: 'body',
+    el: '#appContainer',
     tagName : 'div',
     id : 'details',
     className : 'viewWrapper',
@@ -20,8 +20,16 @@ define([
         title : this.options.title,
         description : this.options.description
       };
-      $(this.el).html(Mustache.to_html(this.template, data));
+
+      this.$el.html(Mustache.to_html(this.template, data));
+
+      // hide arrow box
+      this.$el.find('ul').hide();
+
+      // refresh scroll
       $.setupScroll(this.$el);
+
+      // get data
       if (this.collection.length === 0) {
         this.collection.fetch({
           data : {
@@ -41,10 +49,12 @@ define([
     },
     getDetailsSuccess : function(collection) {
       this.docFragment = document.createDocumentFragment();
-
-      _.each(collection.models, this.appendDetail);
-      this.$el.find('ul').append(this.docFragment);
-      $.refreshScroll(this.$el);
+      if (collection.length > 0) {
+        this.$el.find('ul').show();
+        _.each(collection.models, this.appendDetail);
+        this.$el.find('ul').append(this.docFragment);
+        $.refreshScroll(this.$el);
+      }
     },
     getDetailsError : function() {
       alert('Cannot connect to server');

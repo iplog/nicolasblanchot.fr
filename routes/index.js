@@ -6,7 +6,7 @@ var phoneRgx = /android.+mobile|bada\/|blackberry|iemobile|ip(hone|od)|kindle|op
 exports.index = function(req, res) {
   var data = {
     locals : {
-      title : 'Nicolas Blanchot Resume'
+      title : 'My Resume'
     }
   };
 

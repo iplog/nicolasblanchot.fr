@@ -12,7 +12,7 @@ define([
       _.bindAll(this, 'render');
     },
     render : function() {
-      $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
+      this.$el.html(Mustache.to_html(this.template, this.model.toJSON()));
       return this;
     }
   });

@@ -3,6 +3,14 @@
     var scroller;
     var windowHeight;
 
+    var iScrollOptions = {
+      hScroll : false,
+      hScrollbar : false,
+      fadeScrollbar : true,
+      fixedScrollbar : false,
+      hideScrollbar : true
+    };
+
     $.initialize = function(debug) {
       scroller = null;
       windowHeight = window.innerHeight || 460;

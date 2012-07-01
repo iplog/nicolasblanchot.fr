@@ -16,7 +16,8 @@ define([
     render : function() {
       var data = this.model.attributes;
       data.hasLink = this.model.get('link') === 'true';
-      $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
+      this.$el.html(Mustache.to_html(this.template, this.model.toJSON()));
+      new ActiveButton(this.el);
       return this;
     },
     goToDetails : function(evt) {

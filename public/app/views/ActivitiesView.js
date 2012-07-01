@@ -6,7 +6,7 @@ define([
   ActivityView
 ) {
   return Backbone.View.extend({
-    el: 'body',
+    el: '#appContainer',
     tagName : 'div',
     id : 'activities',
     className : 'viewWrapper',
@@ -19,7 +19,7 @@ define([
       var data = {
         title : this.options.title
       };
-      $(this.el).html(Mustache.to_html(this.template, data));
+      this.$el.html(Mustache.to_html(this.template, data));
       $.setupScroll(this.$el);
       if (this.collection.length === 0) {
         this.collection.fetch({

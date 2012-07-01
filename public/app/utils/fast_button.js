@@ -132,7 +132,7 @@ window.ActiveButton.prototype.onTouchStart = function(event) {
       $(that.element).addClass('active');
       that.isActivated = true;
     }
-  }, 200);
+  }, 100);
 };
 window.ActiveButton.prototype.onTouchMove = function(event) {
   if (Math.abs(event.touches[0].clientX - this.startX) > 10 ||
@@ -153,4 +153,3 @@ window.ActiveButton.prototype.onTouchEnd = function(event) {
   this.touchHasFinished = true;
   $(this.element).removeClass('active');
 };
-
