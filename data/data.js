@@ -11,7 +11,7 @@ exports.categories = categories;
 var activities = [{
   id: 0,
   date : 'Since Oct 2010',
-  title : 'Civiliz CTO and co-founder, – Paris, France',
+  title : 'Civiliz CTO and co-founder – Paris, France',
   link : true,
   cat: 0,
   description : 'Civiliz is a startup which has created a location based feedback service for businesses. It works with companies such as Société Générale, Quick, SNCF or Caisse d’Epargne.'

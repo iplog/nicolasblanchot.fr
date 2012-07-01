@@ -13,22 +13,20 @@ body {
   -webkit-text-size-adjust: none;
   -webkit-transform-style: preserve-3d;
   -webkit-user-select: none;
-  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  .heleveticaFont(18px);
+  -webkit-font-smoothing : antialiased;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
   background-color: @backgroundColor;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  color: @mainColor;
+  color: @mainColor;  line-height : 1.5;
 }
 body > .current {
   display: block !important;
 }
 
-body.landscape > * {
-  min-height: 320px;
-}
 body.landscape .toolbar > h1 {
   margin-left: -125px;
   width: 250px;
@@ -53,9 +51,9 @@ h1, h2 {
   height: 45px;
   padding: 10px;
   &> h1 {
-    .jennaSueFont(24px);
+    .cursiveFont(21px);
     color: @mainColor;
-    text-shadow: rgba(42, 42, 42, 0.75) 0 -1px 0;
+    text-shadow: rgba(42, 42, 42, 0.65) 0 1px 0;
     height: 40px;
     left: 50%;
     margin: 1px 0 0 -75px;
@@ -66,6 +64,11 @@ h1, h2 {
     .ellipsis();
   }
 }
+
+.scrollable {
+  padding-bottom: 10px;
+}
+
 
 ul {
   color: @mainColor;

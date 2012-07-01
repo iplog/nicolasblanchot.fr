@@ -3,12 +3,25 @@
     var scroller;
     var windowHeight;
 
-    $.initialize = function() {
+    $.initialize = function(debug) {
       scroller = null;
       windowHeight = window.innerHeight || 460;
+
+      // prevent native scroll on pages
       document.body.addEventListener('touchmove', function(e) {
         return e.preventDefault();
       });
+
+      // handle orientation changes
+      window.onorientationchange = doOnOrientationChange;
+
+      // Initial execution
+      doOnOrientationChange();
+
+      // start less css if debug mode
+      if (debug && window.less) {
+        less.watch();
+      }
 
       return $('body');
     };
@@ -51,6 +64,17 @@
         return h += $(elt).outerHeight();
       }, 0);
       return element.find('.wrapper').css('height', height + 'px');
+    }
+    function doOnOrientationChange() {
+      switch(window.orientation) {
+      case -90:
+      case 90:
+        $('body').addClass('landscape');
+        break;
+      default:
+        $('body').removeClass('landscape');
+        break;
+      }
     }
   })(jQuery);
 }).call(this);

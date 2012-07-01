@@ -14,12 +14,11 @@
   font-family: "Helvetica Neue",Arial,Helvetica,sans-serif
 }
 
-.jennaSueFont(@size) {
+.cursiveFont(@size) {
   font-style: normal;
-  font-family:'JennaSue', 'Arial';
+  font-family: 'JennaSue', cursive;
   font-variant: normal;
   font-size: @size;
-  font-weight: bold;
   line-height: 1em;
 }
 .ellipsis() {
@@ -27,3 +26,32 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.arrow_box(@arrowSize: 20px, @radius:6px) {
+  .rounded(@radius);
+  position: relative;
+  background: white;
+  border: 4px solid @borderColor;
+  &:after, &:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-bottom-color: @listBackgroundColor;
+    border-width: @arrowSize;
+    left: 50%;
+    margin-left: -@arrowSize;
+  }
+  &:before {
+    border-bottom-color: @borderColor;
+    border-width: @arrowSize + 6;
+    left: 50%;
+    margin-left: -(@arrowSize + 6);
+  }
+}
+

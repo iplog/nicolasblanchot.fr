@@ -1,6 +1,6 @@
 define(function() {
   return {
     webapp : true,
-    geolocate : false
+    debug : true
   };
 });
