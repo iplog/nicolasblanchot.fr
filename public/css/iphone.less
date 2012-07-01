@@ -2,6 +2,7 @@
 @import "../app/styles/elements";
 @import "../app/styles/lib";
 
+/* general elements */
 * {
   margin: 0px;
   padding: 0px;
@@ -17,7 +18,20 @@ body {
   height: 100%;
   width: 100%;
   background-color: @backgroundColor;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: @mainColor;
+}
+body > .current {
+  display: block !important;
+}
+
+body.landscape > * {
+  min-height: 320px;
+}
+body.landscape .toolbar > h1 {
+  margin-left: -125px;
+  width: 250px;
 }
 
 a {
@@ -31,11 +45,7 @@ h1, h2 {
   text-shadow: rgba(255, 255, 255, 0.19)
 }
 
-body.landscape .toolbar > h1 {
-  margin-left: -125px;
-  width: 250px;
-}
-
+/* UI elements */
 .toolbar {
   -webkit-box-sizing: border-box;
   .toolBarGradient();
@@ -62,90 +72,66 @@ ul {
   .heleveticaFont(17px);
   margin: 0px 0 17px;
   padding: 0;
-}
-
-ul li {
-  font-size: 14px;
-  border-top: 1px solid #B4B4B4;
-  color: #666;
-  list-style-type: none;
-  div {
-    padding: 10px;
-    overflow: hidden;
-    &.arrow {
-      background-image: url("../images/arrow.png");
-      background-position: 100% 50%;
-      background-repeat: no-repeat;
+  li {
+    font-size: 14px;
+    border-bottom: 1px solid @borderColor;
+    color: @mainColor;
+    list-style-type: none;
+    background-color: @listBackgroundColor;
+    div {
+      padding: 10px;
+      overflow: hidden;
+      &.arrow {
+        background-image: url("../images/arrow.png");
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+      }
+    }
+    &.active{
+        background-color: rgba(0, 0, 0, 0.35);
     }
   }
-  &.active{
-      background-color: rgba(0, 0, 0, 0.35);
+}
+
+li {
+  &:first-child {
+    border-top: 0;
+    a {
+      border-top: 0;
+    }
   }
 }
-
-li:first-child, li:first-child a {
-  border-top: 0px;
-  border-top-left-radius: 8px 8px;
-  border-top-right-radius: 8px 8px;
-}
-
-body > .current {
-  display: block !important;
-}
-
-body.landscape > * {
-  min-height: 320px;
-}
-
 
 ul li a, li.img a + a {
   color: black;
   display: block;
   margin: -10px;
-  overflow: hidden;
   padding: 12px 10px;
   text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  .ellipsis();
 }
-
 
 .button, .back, .cancel, .add {
-  -webkit-border-image: url("../images/toolButton.png") 0 5 0 5 stretch stretch;
-  background: none;
-  border-width: 0px 5px;
   color: white;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: bold;
-  height: 30px;
-  line-height: 30px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px 3px;
+  height: 45px;
+  width: 45px;
+  margin: 0;
+  padding: 0;
   position: absolute;
-  right: 6px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  text-shadow: rgba(0, 0, 0, 0.496094) 0px -1px 0px;
-  top: 8px;
-  white-space: nowrap;
-  width: auto;
-  &.active {
-    -webkit-border-image: url("../images/toolButtonActive.png") 0 5 0 5
-stretch stretch;
-  }
+  right: 0;
+  top: 0;
 }
-
 .back {
-  border-width: 0px 8px 0px 14px;
-  left: 6px;
-  max-width: 55px;
+  left: 0;
   padding: 0px;
   right: auto;
-  -webkit-border-image: url("../images/backButton.png") 0 8 0 14 stretch stretch;
-  &.active {
-    -webkit-border-image: url("../images/backButtonActive.png") 0 8 0 14
-stretch stretch;
-  }
+  border-right: 1px solid @borderColor;
+  background-image: url('../images/arrow_back.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+/* ui events styles */
+.active {
+  background-color: rgba(42, 42, 42, 0.29);
 }
