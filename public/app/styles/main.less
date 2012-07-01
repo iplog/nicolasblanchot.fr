@@ -2,6 +2,7 @@ html{
   margin : 0;
   padding : 0;
   border : 0;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,
 address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
@@ -16,13 +17,13 @@ header,hgroup,nav,section {
   font-family : inherit;
   vertical-align : baseline;
 }
-
 article,aside,dialog,figure,footer,header,hgroup,nav,section {
   display : block
 }
 body {
   line-height : 1.5;
-  background : #fff
+  font : bold 18px "Helvetica Neue",Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing : antialiased;
 }
 table {
   border-collapse : separate;
@@ -48,14 +49,7 @@ a img {
 :focus {
   outline : 0
 }
-body {
-  font : bold 18px "Helvetica Neue",Arial,Helvetica,sans-serif;
-  font-family : "Ovo",serif;
-  overflow : none;
-  -webkit-font-smoothing : antialiased;
-  background : #000;
-}
-a{
+a {
   color : #f95a5a;
   text-decoration : none
 }
@@ -68,4 +62,3 @@ div {
   -webkit-backface-visibility : hidden;
   z-index : 900
 }
-

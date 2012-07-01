@@ -1,15 +1,10 @@
 @import "../app/styles/colors";
+@import "../app/styles/elements";
+@import "../app/styles/lib";
 
 * {
   margin: 0px;
   padding: 0px;
-}
-.toolbar {
-  -webkit-box-sizing: border-box;
-  background: url("../images/toolbar.png") gray repeat-x;
-  border-bottom: 1px solid #2D3642;
-  height: 45px;
-  padding: 10px;
 }
 
 body {
@@ -17,12 +12,10 @@ body {
   -webkit-text-size-adjust: none;
   -webkit-transform-style: preserve-3d;
   -webkit-user-select: none;
-  font-family: Helvetica;
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background: url("../images/background.gif");
-  background-repeat: no-repeat;
   background-color: @backgroundColor;
   color: @mainColor;
 }
@@ -33,48 +26,45 @@ a {
 
 h1, h2 {
   color: #4C566C;
-  font: normal normal bold 18px/normal Helvetica;
+  .heleveticaFont(18px);
   margin: 10px 20px 6px;
   text-shadow: rgba(255, 255, 255, 0.19)
 }
+
 body.landscape .toolbar > h1 {
   margin-left: -125px;
   width: 250px;
 }
 
-.toolbar > h1 {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  height: 40px;
-  left: 50%;
-  line-height: 1em;
-  margin: 1px 0px 0px -75px;
-  overflow: hidden;
-  position: absolute;
-  text-align: center;
-  text-overflow: ellipsis;
-  text-shadow: rgba(0, 0, 0, 0.398438) 0px -1px 0px;
-  top: 10px;
-  white-space: nowrap;
-  width: 150px;
+.toolbar {
+  -webkit-box-sizing: border-box;
+  .toolBarGradient();
+  border-bottom: 1px solid @borderColor;
+  height: 45px;
+  padding: 10px;
+  &> h1 {
+    .jennaSueFont(24px);
+    color: @mainColor;
+    text-shadow: rgba(42, 42, 42, 0.75) 0 -1px 0;
+    height: 40px;
+    left: 50%;
+    margin: 1px 0 0 -75px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 150px;
+    .ellipsis();
+  }
 }
 
 ul {
-  background: white;
-  border: 1px solid #B4B4B4;
-  border-bottom-left-radius: 8px 8px;
-  border-bottom-right-radius: 8px 8px;
-  border-top-left-radius: 8px 8px;
-  border-top-right-radius: 8px 8px;
-  color: black;
-  font: normal normal bold 17px/normal Helvetica;
-  margin: 15px 10px 17px;
-  padding: 0px;
+  color: @mainColor;
+  .heleveticaFont(17px);
+  margin: 0px 0 17px;
+  padding: 0;
 }
 
 ul li {
-  color: black;
   font-size: 14px;
   border-top: 1px solid #B4B4B4;
   color: #666;

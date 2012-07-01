@@ -1,3 +1,4 @@
+// thanks to http://detectmobilebrowsers.com/
 var phoneRgx = /android.+mobile|bada\/|blackberry|iemobile|ip(hone|od)|kindle|opera m(ob|in)i|palm( os)?|phone|windows (ce|phone)/i;
 /**
  * GET home page.
