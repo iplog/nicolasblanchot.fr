@@ -17,7 +17,7 @@ while getopts "whs" opt; do
 done
 
 if [ $watch == "no" ]; then
-  cd ../www/app
+  cd ../public/app
 
   if [ $minify == "yes" ]; then
     # compile js files

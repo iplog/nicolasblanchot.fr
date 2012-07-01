@@ -198,27 +198,27 @@ exports.activities = activities;
 var details = [{
   id: 0,
   activityId: 0,
-  text: 'Developed websites and mobile applications (iPad, iPhone and Android text: with PhoneGap)'
+  text: 'Developed websites and mobile applications (iPad, iPhone and Android with PhoneGap)'
 }, {
   id: 1,
   activityId: 0,
-  text: 'managed a 4 people team'
+  text: 'Managed a 4 people team'
 }, {
   id: 2,
   activityId: 0,
-  text: 'designed development process'
+  text: 'Designed development process'
 }, {
   id: 3,
   activityId: 0,
-  text: 'took part in product conception'
+  text: 'Took part in product conception'
 },{
   id: 4,
   activityId: 0,
-  text: 'designed application, database and system architecture (Amazon EC2)'
+  text: 'Designed application, database and system architecture (Amazon EC2)'
 }, {
   id: 5,
   activityId: 0,
-  text: 'technology watch'
+  text: 'Technology watch'
 }, {
   id: 6,
   activityId: 2,
@@ -226,15 +226,15 @@ var details = [{
 }, {
   id: 7,
   activityId: 2,
-  text: 'product conception'
+  text: 'Product conception'
 }, {
   id: 8,
   activityId: 2,
-  text: 'process design'
+  text: 'Process design'
 }, {
   id: 9,
   activityId: 2,
-  text: 'project management and database design'
+  text: 'Project management and database design'
 }, {
   id: 10,
   activityId: 4,
@@ -318,11 +318,11 @@ var details = [{
 }, {
   id: 30,
   activityId: 10,
-  text: 'cuke4php (beginner)'
+  text: 'Cuke4php (beginner)'
 }, {
   id: 31,
   activityId: 10,
-  text: 'node.js (beginner)'
+  text: 'Node.js (beginner)'
 }, {
   id: 32,
   activityId: 10,
@@ -342,7 +342,7 @@ var details = [{
 }, {
   id: 36,
   activityId: 12,
-  text: 'git'
+  text: 'Git'
 }, {
   id: 37,
   activityId: 12,
@@ -350,7 +350,7 @@ var details = [{
 }, {
   id: 38,
   activityId: 12,
-  text: 'basic knowledge in C, C++ and Java'
+  text: 'Basic knowledge in C, C++ and Java'
 }, {
   id: 39,
   activityId: 13,
@@ -366,7 +366,7 @@ var details = [{
 }, {
   id: 42,
   activityId: 18,
-  text: 'team of 5 people'
+  text: 'Team of 5 people'
 }, {
   id: 43,
   activityId: 18,
@@ -382,42 +382,42 @@ var details = [{
 }, {
   id: 46,
   activityId: 18,
-  text: 'node.js'
+  text: 'Node.js'
 }, {
   id: 47,
   activityId: 18,
-  text: 'redis'
+  text: 'Redis'
 }, {
   id: 48,
   activityId: 19,
-  text: 'webmaster'
+  text: 'Webmaster'
 }, {
   id: 49,
   activityId: 19,
-  text: 'concerts organization'
+  text: 'Concerts organization'
 }, {
   id: 50,
   activityId: 19,
-  text: 'research of financial or material sponsors'
+  text: 'Research of financial or material sponsors'
 }, {
   id: 51,
   activityId: 20,
-  text: 'play the bass guitar'
+  text: 'Play the bass guitar'
 }, {
   id: 52,
   activityId: 20,
-  text: 'rock climbing'
+  text: 'Rock climbing'
 }, {
   id: 53,
   activityId: 20,
-  text: 'sailing'
+  text: 'Sailing'
 }, {
   id: 54,
   activityId: 20,
-  text: 'running'
+  text: 'Running'
 }, {
   id: 55,
   activityId: 20,
-  text: 'technology watch'
+  text: 'Technology watch'
 }];
 exports.details = details;
