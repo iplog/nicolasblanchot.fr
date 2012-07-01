@@ -7,11 +7,10 @@
       hScroll : false,
       hScrollbar : false,
       fadeScrollbar : true,
-      fixedScrollbar : false,
-      hideScrollbar : true
+      fixedScrollbar : false
     };
 
-    $.initialize = function(debug) {
+    $.initialize = function(config) {
       scroller = null;
       windowHeight = window.innerHeight || 460;
 
@@ -27,7 +26,7 @@
       doOnOrientationChange();
 
       // start less css if debug mode
-      if (debug && window.less) {
+      if (config.cssMode && window.less) {
         less.watch();
       }
 
@@ -52,7 +51,7 @@
       if (scrollable) {
         setTimeout(function() {
           setWrapperHeight(element);
-          scroller = new iScroll(scrollable);
+          scroller = new iScroll(scrollable, iScrollOptions);
         }, 0);
         return scroller;
       }

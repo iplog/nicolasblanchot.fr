@@ -56,7 +56,6 @@ define([
         return;
       }
       var activity = plogApp.activities.get(id);
-      console.log(activity);
 
       var createView = plogApp.detailsView === undefined ||
         parseInt(id, 10) !== plogApp.detailsView.options.activityId;

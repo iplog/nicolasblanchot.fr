@@ -48,13 +48,13 @@ h1, h2 {
   -webkit-box-sizing: border-box;
   .toolBarGradient();
   border-bottom: 1px solid @borderColor;
-  height: 45px;
-  padding: 10px;
+  height: @toolBarHeight;
+  /*padding: 10px;*/
   &> h1 {
     .cursiveFont(21px);
     color: @mainColor;
     text-shadow: rgba(42, 42, 42, 0.65) 0 1px 0;
-    height: 40px;
+    /*height: 40px;*/
     left: 50%;
     margin: 1px 0 0 -75px;
     position: absolute;
@@ -65,10 +65,15 @@ h1, h2 {
   }
 }
 
+.wrapper {
+  position: absolute;
+  top : @toolBarHeight + 1;
+  width: 100%;
+}
+
 .scrollable {
   padding-bottom: 10px;
 }
-
 
 ul {
   color: @mainColor;
