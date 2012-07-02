@@ -21,7 +21,7 @@ if [ $watch == "no" ]; then
 
   if [ $minify == "yes" ]; then
     # compile js files
-    node ../../dev/r.js -o build_conf.js
+    node ../../dev/r.js -o baseUrl=. name=../js/requirejs/almond include=main out=main-built.js wrap=true paths.text=../js/requirejs/text paths.domReady=../js/requirejs/domReady
   else
     node ../../dev/r.js -o build_conf_dev.js
   fi

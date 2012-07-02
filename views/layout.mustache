@@ -35,7 +35,11 @@
 
   <script type="text/javascript" src="/js/add2home.js" charset="utf-8"></script>
 
+  {{^isProd}}
   <script type="text/javascript" src="/js/requirejs/require.min.js"></script>
+  <script type="text/javascript" src="/app/main.js"></script>
+  <script type="text/javascript" src="/js/less-1.3.0.min.js"></script>
+  {{/isProd}}
 
   {{#isProd}}
   <script type="text/javascript" src="/app/main-built.js"></script>
@@ -52,10 +56,6 @@
   </script>
   {{/isProd}}
 
-  {{^isProd}}
-  <script type="text/javascript" src="/js/less-1.3.0.min.js"></script>
-  <script type="text/javascript" src="/app/main.js"></script>
-  {{/isProd}}
 
 </head>
 <body>

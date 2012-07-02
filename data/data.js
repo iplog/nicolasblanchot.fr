@@ -13,6 +13,7 @@ var activities = [{
   date : 'Since Oct 2010',
   title : 'Civiliz CTO and co-founder – Paris, France',
   link : true,
+  target : '',
   cat: 0,
   description : 'Civiliz is a startup which has created a location based feedback service for businesses. It works with companies such as Société Générale, Quick, SNCF or Caisse d’Epargne.'
 }, {
@@ -20,6 +21,7 @@ var activities = [{
   date : 'Mar 2012',
   title : 'JavaScript trainer – Paris, France',
   link : true,
+  target : '',
   cat: 0,
   description : 'Trained LogSafe company developer team in JavaScript, requirejs, mustache and Backbone.'
 }, {
@@ -27,6 +29,7 @@ var activities = [{
   date : 'Jun 2010 - Sep 2010',
   title : 'Web developer at lelivrescolaire.fr (scholar publishing startup company) – Paris, France',
   link : true,
+  target : '',
   cat: 0,
   description : ''
 }, {
@@ -34,6 +37,7 @@ var activities = [{
   date : 'Oct 2009',
   title : 'Teacher assistant at ESCP Europe, “Département PRACTICE” – Paris, France',
   link : true,
+  target : '',
   cat: 0,
   description : 'Excel and VBA teacher assistant and in charge of training session for students.'
 }, {
@@ -41,6 +45,7 @@ var activities = [{
   date : 'Feb 2009 - Jul 2009',
   title : 'French Chamber of Commerce and Industry of Morocco – Casablanca, Morocco',
   link : true,
+  target : '',
   cat: 0,
   description : ''
 }, {
@@ -48,6 +53,7 @@ var activities = [{
   date : 'Jul 2008 - Dec 2008',
   title : 'Mazars, Audit and Advisory company, IT Department – Paris, France',
   link : true,
+  target : '',
   cat: 0,
   description : ''
 }, {
@@ -55,6 +61,7 @@ var activities = [{
   date : 'Sep 2009 - Jun 2010',
   title : 'Ecole Centrale Paris (partnership with ESCP Europe) – Paris, France',
   link : true,
+  target : '',
   cat: 1,
   description : 'Second year of MSc Specialization in “Information Technology”, especially in software conception and computer programming.'
 }, {
@@ -62,6 +69,7 @@ var activities = [{
   date : 'Sep 2006 - Jul 2010',
   title : 'MSc in management ESCP Europe – Paris, France',
   link : true,
+  target : '',
   cat: 1,
   description: '"Grande Ecole" program, specialization in management with a strong focus on information systems and new technologies'
 }, {
@@ -69,6 +77,7 @@ var activities = [{
   date : 'Sep 2004 - Jun 2006',
   title : 'Lycée Henri IV, Classes préparatoires ECS – Paris, France',
   link : false,
+  target : '',
   cat: 1,
   description : ''
 },{
@@ -76,6 +85,7 @@ var activities = [{
   date : '',
   title : 'Website development languages',
   link : true,
+  target : '',
   cat: 2,
   description : ''
 }, {
@@ -83,6 +93,7 @@ var activities = [{
   date : '',
   title : 'Frameworks, libraries and tools',
   link : true,
+  target : '',
   cat: 2,
   description : ''
 }, {
@@ -90,6 +101,7 @@ var activities = [{
   date : '',
   title : 'Systems and servers',
   link : true,
+  target : '',
   cat: 2,
   description : ''
 }, {
@@ -97,6 +109,7 @@ var activities = [{
   date : '',
   title : 'Other computer skills',
   link : true,
+  target : '',
   cat: 2,
   description : ''
 }, {
@@ -104,6 +117,7 @@ var activities = [{
   date: '',
   title: 'Office software applications',
   link : true,
+  target : '',
   cat: 2,
   description : 'Microsoft Office'
 }, {
@@ -111,6 +125,7 @@ var activities = [{
   date : '',
   title : 'French (Native)',
   link : false,
+  target : '',
   cat: 3,
   description : ''
 }, {
@@ -118,6 +133,7 @@ var activities = [{
   date : '',
   title : 'English (Fluent)',
   link : false,
+  target : '',
   cat: 3,
   description: ''
 }, {
@@ -125,6 +141,7 @@ var activities = [{
   date : '',
   title : 'Spanish (Proficient)',
   link : false,
+  target : '',
   cat: 3,
   description: ''
 }, {
@@ -132,6 +149,7 @@ var activities = [{
   date : '',
   title : 'Russian (Basic skills)',
   link : false,
+  target : '',
   cat: 3,
   description: ''
 }, {
@@ -139,6 +157,7 @@ var activities = [{
   date : 'Jun 2012',
   title : 'Transilien hackdays',
   link : true,
+  target : '',
   cat: 4,
   description : 'Lucomo project: a game to help you get your train and to let you gamble on your train line activity'
 }, {
@@ -146,6 +165,7 @@ var activities = [{
   date : '2006 - 2008',
   title : 'ESCP Polyphony',
   link : true,
+  target : '',
   cat: 4,
   description : 'Managed the ESCP Europe musical club'
 }, {
@@ -153,6 +173,7 @@ var activities = [{
   date : '2008 - 2010',
   title : 'Baobab',
   link : false,
+  target : '',
   cat: 4,
   description : 'Webmaster and lead developer of Baobab’s website, the student website club of ESCP Europe'
 }, {
@@ -160,6 +181,7 @@ var activities = [{
   date : '',
   title : 'Leisure',
   link : true,
+  target : '',
   cat: 4,
   description : ''
 },{
@@ -167,6 +189,7 @@ var activities = [{
   date : '',
   title : 'Nicolas Blanchot',
   link : false,
+  target : '',
   cat: 5,
   description : ''
 }, {
@@ -174,6 +197,7 @@ var activities = [{
   date : '',
   title : '26 years old',
   link : false,
+  target : '',
   cat: 5,
   description : ''
 }, {
@@ -181,13 +205,31 @@ var activities = [{
   date : '',
   title : 'French',
   link : false,
+  target : '',
   cat: 5,
   description : ''
 }, {
   id: 25,
   date : '',
   title : 'Twitter: @Plog_',
-  link : false,
+  link : true,
+  target : 'https://twitter.com/Plog_',
+  cat: 5,
+  description : ''
+}, {
+  id: 26,
+  date : '',
+  title : 'My resume (PDF)',
+  link : true,
+  target : 'files/CV_nicolas_blanchot_201205.pdf',
+  cat: 5,
+  description : ''
+}, {
+  id: 27,
+  date : '',
+  title : 'LinkedIn',
+  link : true,
+  target : 'http://fr.linkedin.com/pub/nicolas-blanchot/1a/8b0/b9',
   cat: 5,
   description : ''
 }];
@@ -401,23 +443,23 @@ var details = [{
   text: 'Research of financial or material sponsors'
 }, {
   id: 51,
-  activityId: 20,
+  activityId: 21,
   text: 'Play the bass guitar'
 }, {
   id: 52,
-  activityId: 20,
+  activityId: 21,
   text: 'Rock climbing'
 }, {
   id: 53,
-  activityId: 20,
+  activityId: 21,
   text: 'Sailing'
 }, {
   id: 54,
-  activityId: 20,
+  activityId: 21,
   text: 'Running'
 }, {
   id: 55,
-  activityId: 20,
+  activityId: 21,
   text: 'Technology watch'
 }];
 exports.details = details;
