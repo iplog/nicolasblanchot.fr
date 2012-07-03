@@ -17,3 +17,8 @@ node_modules
 # redis dump
 ###
 dump.rdb
+
+###
+# gziped files
+###
+*.gz

@@ -6,13 +6,29 @@
 var express = require('express');
 var routes = require('./routes');
 var api = require('./routes/api');
+var gzip = require('connect-gzip');
 var mustacheCompiler = require('./tools/mustache_compiler');
 var data = require('./tools/data');
+var app;
+
 
 // add data
 data.createData();
 
-var app = module.exports = express.createServer();
+// isProd
+global.isProd = !(!process.env.PORT);
+
+if (global.isProd) {
+  app = module.exports = express.createServer(
+    gzip.staticGzip(__dirname + '/public'),
+    gzip.gzip()
+  );
+} else {
+  app = module.exports = express.createServer(
+    gzip.staticGzip(__dirname + '/public'),
+    gzip.gzip()
+  );
+}
 
 // Configuration
 app.configure(function(){
@@ -42,8 +58,6 @@ app.get('/categories', api.categories);
 app.get('/activities', api.activities);
 app.get('/details', api.details);
 app.get('/*', routes.error404);
-
-global.isProd = !(!process.env.PORT);
 
 var port = process.env.PORT || 3000;
 
