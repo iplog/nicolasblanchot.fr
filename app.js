@@ -24,10 +24,7 @@ if (global.isProd) {
     gzip.gzip()
   );
 } else {
-  app = module.exports = express.createServer(
-    gzip.staticGzip(__dirname + '/public'),
-    gzip.gzip()
-  );
+  app = module.exports = express.createServer();
 }
 
 // Configuration
