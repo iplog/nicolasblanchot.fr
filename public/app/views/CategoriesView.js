@@ -17,7 +17,7 @@ define([
     },
     render : function() {
       var data = {
-        title : 'My resume'
+        title : 'my resume'
       };
       this.$el.html(Mustache.to_html(this.template, data));
       $.setupScroll(this.$el);

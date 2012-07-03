@@ -16,6 +16,7 @@ define([
     render : function() {
       var data = this.model.toJSON();
       data.hasLink = this.model.get('link') === 'true';
+      data.hasLogo = this.model.get('logo') !== '';
 
       this.$el.html(Mustache.to_html(this.template, data));
       new ActiveButton(this.el);

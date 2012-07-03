@@ -45,7 +45,7 @@ define([
         plogApp.activitiesView = new ActivitiesView({
           collection : plogApp.activities,
           catId : category.get('id'),
-          title : category.get('name')
+          title : category.get('name').toLowerCase()
         });
       }
       return plogApp.activitiesView.render();
@@ -64,7 +64,7 @@ define([
         plogApp.detailsView = new DetailsView({
           collection : new Details(),
           description : activity.get('description'),
-          title : activity.get('title'),
+          title : activity.get('title').toLowerCase(),
           activityId : activity.get('id')
         });
       }

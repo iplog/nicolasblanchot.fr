@@ -14,6 +14,7 @@ var activities = [{
   title : 'Civiliz CTO and co-founder – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : 'Civiliz is a startup which has created a location based feedback service for businesses. It works with companies such as Société Générale, Quick, SNCF or Caisse d’Epargne.'
 }, {
@@ -22,6 +23,7 @@ var activities = [{
   title : 'JavaScript trainer – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : 'Trained LogSafe company developer team in JavaScript, requirejs, mustache and Backbone.'
 }, {
@@ -30,6 +32,7 @@ var activities = [{
   title : 'Web developer at lelivrescolaire.fr (scholar publishing startup company) – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : ''
 }, {
@@ -38,6 +41,7 @@ var activities = [{
   title : 'Teacher assistant at ESCP Europe, “Département PRACTICE” – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : 'Excel and VBA teacher assistant and in charge of training session for students.'
 }, {
@@ -46,6 +50,7 @@ var activities = [{
   title : 'French Chamber of Commerce and Industry of Morocco – Casablanca, Morocco',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : ''
 }, {
@@ -54,6 +59,7 @@ var activities = [{
   title : 'Mazars, Audit and Advisory company, IT Department – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 0,
   description : ''
 }, {
@@ -62,6 +68,7 @@ var activities = [{
   title : 'Ecole Centrale Paris (partnership with ESCP Europe) – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 1,
   description : 'Second year of MSc Specialization in “Information Technology”, especially in software conception and computer programming.'
 }, {
@@ -70,6 +77,7 @@ var activities = [{
   title : 'MSc in management ESCP Europe – Paris, France',
   link : true,
   target : '',
+  logo : '',
   cat: 1,
   description: '"Grande Ecole" program, specialization in management with a strong focus on information systems and new technologies'
 }, {
@@ -78,6 +86,7 @@ var activities = [{
   title : 'Lycée Henri IV, Classes préparatoires ECS – Paris, France',
   link : false,
   target : '',
+  logo : '',
   cat: 1,
   description : ''
 },{
@@ -86,6 +95,7 @@ var activities = [{
   title : 'Website development languages',
   link : true,
   target : '',
+  logo : '',
   cat: 2,
   description : ''
 }, {
@@ -94,6 +104,7 @@ var activities = [{
   title : 'Frameworks, libraries and tools',
   link : true,
   target : '',
+  logo : '',
   cat: 2,
   description : ''
 }, {
@@ -102,6 +113,7 @@ var activities = [{
   title : 'Systems and servers',
   link : true,
   target : '',
+  logo : '',
   cat: 2,
   description : ''
 }, {
@@ -110,6 +122,7 @@ var activities = [{
   title : 'Other computer skills',
   link : true,
   target : '',
+  logo : '',
   cat: 2,
   description : ''
 }, {
@@ -118,6 +131,7 @@ var activities = [{
   title: 'Office software applications',
   link : true,
   target : '',
+  logo : '',
   cat: 2,
   description : 'Microsoft Office'
 }, {
@@ -126,6 +140,7 @@ var activities = [{
   title : 'French (Native)',
   link : false,
   target : '',
+  logo : '',
   cat: 3,
   description : ''
 }, {
@@ -134,6 +149,7 @@ var activities = [{
   title : 'English (Fluent)',
   link : false,
   target : '',
+  logo : '',
   cat: 3,
   description: ''
 }, {
@@ -142,6 +158,7 @@ var activities = [{
   title : 'Spanish (Proficient)',
   link : false,
   target : '',
+  logo : '',
   cat: 3,
   description: ''
 }, {
@@ -150,6 +167,7 @@ var activities = [{
   title : 'Russian (Basic skills)',
   link : false,
   target : '',
+  logo : '',
   cat: 3,
   description: ''
 }, {
@@ -158,6 +176,7 @@ var activities = [{
   title : 'Transilien hackdays',
   link : true,
   target : '',
+  logo : '',
   cat: 4,
   description : 'Lucomo project: a game to help you get your train and to let you gamble on your train line activity'
 }, {
@@ -166,6 +185,7 @@ var activities = [{
   title : 'ESCP Polyphony',
   link : true,
   target : '',
+  logo : '',
   cat: 4,
   description : 'Managed the ESCP Europe musical club'
 }, {
@@ -174,6 +194,7 @@ var activities = [{
   title : 'Baobab',
   link : false,
   target : '',
+  logo : '',
   cat: 4,
   description : 'Webmaster and lead developer of Baobab’s website, the student website club of ESCP Europe'
 }, {
@@ -182,6 +203,7 @@ var activities = [{
   title : 'Leisure',
   link : true,
   target : '',
+  logo : '',
   cat: 4,
   description : ''
 },{
@@ -190,6 +212,7 @@ var activities = [{
   title : 'Nicolas Blanchot',
   link : false,
   target : '',
+  logo : 'U',
   cat: 5,
   description : ''
 }, {
@@ -198,6 +221,7 @@ var activities = [{
   title : '26 years old',
   link : false,
   target : '',
+  logo : '',
   cat: 5,
   description : ''
 }, {
@@ -206,6 +230,7 @@ var activities = [{
   title : 'French',
   link : false,
   target : '',
+  logo : '',
   cat: 5,
   description : ''
 }, {
@@ -214,6 +239,7 @@ var activities = [{
   title : 'Twitter: @Plog_',
   link : true,
   target : 'https://twitter.com/Plog_',
+  logo : 't',
   cat: 5,
   description : ''
 }, {
@@ -222,6 +248,7 @@ var activities = [{
   title : 'My resume (PDF)',
   link : true,
   target : 'files/CV_nicolas_blanchot_201205.pdf',
+  logo : 'a',
   cat: 5,
   description : ''
 }, {
@@ -230,6 +257,7 @@ var activities = [{
   title : 'LinkedIn',
   link : true,
   target : 'http://fr.linkedin.com/pub/nicolas-blanchot/1a/8b0/b9',
+  logo : 'l',
   cat: 5,
   description : ''
 }];

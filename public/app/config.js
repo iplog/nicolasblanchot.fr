@@ -1,6 +1,6 @@
 define(function() {
   return {
     webapp : true,
-    cssMode : false
+    cssMode : true
   };
 });

@@ -7,6 +7,15 @@
   src: url('fonts/JennaSue.ttf');
 }
 
+@font-face{
+  font-family: 'WebSymbolsRegular';
+  src: url('fonts/websymbols-regular-webfont.eot');
+  src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/websymbols-regular-webfont.woff') format('woff'),
+    url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+    url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
 .heleveticaFont(@size) {
   font-style: normal;
   font-variant: normal;
@@ -28,6 +37,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.isActive() {
+  background-color: fade(@popColor, 50%);
 }
 
 .arrow_box(@arrowSize: 20px, @radius:6px) {
@@ -57,4 +70,5 @@
     margin-left: -(@arrowSize + 6);
   }
 }
+
 

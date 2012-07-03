@@ -41,7 +41,7 @@ h1, h2 {
   color: #4C566C;
   .heleveticaFont(18px);
   margin: 10px 20px 6px;
-  text-shadow: rgba(255, 255, 255, 0.19)
+  /*text-shadow: rgba(255, 255, 255, 0.19)*/
 }
 
 /* UI elements */
@@ -52,17 +52,16 @@ h1, h2 {
   height: @toolBarHeight;
   /*padding: 10px;*/
   &> h1 {
-    .cursiveFont(21px);
+    .cursiveFont(40px);
     color: @mainColor;
     text-shadow: rgba(42, 42, 42, 0.65) 0 1px 0;
-    /*height: 40px;*/
+    height: 45px;
     left: 50%;
-    margin: 1px 0 0 -75px;
+    margin: -12px 0 0 -75px;
     position: absolute;
     text-align: center;
     top: 10px;
     width: 150px;
-    height: 27px;
     .ellipsis();
   }
 }
@@ -96,10 +95,13 @@ ul {
         background-position: 100% 50%;
         background-repeat: no-repeat;
         cursor: pointer;
+        &:active {
+          .isActive();
+        }
       }
     }
-    &.active, &:active {
-      background-color: rgba(0, 0, 0, 0.12);
+    &.active {
+      .isActive();
     }
   }
 }
@@ -133,7 +135,7 @@ ul li a, li.img a + a {
   top: 0;
   cursor: pointer;
   &:active {
-    background-color: rgba(0, 0, 0, 0.12);
+    .isActive();
   }
 }
 .back {
@@ -148,5 +150,11 @@ ul li a, li.img a + a {
 
 /* ui events styles */
 .active {
-  background-color: rgba(42, 42, 42, 0.29);
+  .isActive();
+}
+
+/* logo font */
+.isLogo {
+  font-family : "WebSymbolsRegular";
+  color : @popColor;
 }
