@@ -260,8 +260,17 @@ var activities = [{
   logo : 'l',
   cat: 5,
   description : ''
-}, , {
+}, {
   id: 28,
+  date : '',
+  title : 'Github',
+  link : true,
+  target : 'https://github.com/iplog/',
+  logo : 'H',
+  cat: 5,
+  description : ''
+}, {
+  id: 29,
   date : '',
   title : 'Email',
   link : true,
