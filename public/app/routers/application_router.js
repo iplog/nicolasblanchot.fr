@@ -38,7 +38,8 @@ define([
       var category = plogApp.categories.get(id);
 
       var createView = plogApp.activitiesView === undefined ||
-        parseInt(id, 10) !== plogApp.activitiesView.options.catId;
+        (plogApp.activitiesView !== undefined &&
+        id !== plogApp.activitiesView.options.catId);
 
       if (createView) {
         plogApp.activities = new Activities();
@@ -58,7 +59,8 @@ define([
       var activity = plogApp.activities.get(id);
 
       var createView = plogApp.detailsView === undefined ||
-        parseInt(id, 10) !== plogApp.detailsView.options.activityId;
+        (plogApp.detailsView !== undefined &&
+        id !== plogApp.detailsView.options.activityId);
 
       if (createView) {
         plogApp.detailsView = new DetailsView({

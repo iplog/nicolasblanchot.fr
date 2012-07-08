@@ -36,7 +36,7 @@ define([
           error: this.getDetailsError
         });
       } else {
-        this.getActivitiesSuccess(this.collection);
+        this.getDetailsSuccess(this.collection);
       }
 
       // create a fast back button
