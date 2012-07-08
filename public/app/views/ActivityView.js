@@ -17,21 +17,20 @@ define([
       var data = this.model.toJSON();
       data.hasLink = this.model.get('link') === 'true';
       data.hasLogo = this.model.get('logo') !== '';
+      data.hasTarget = this.model.get('target') !== '';
 
       this.$el.html(Mustache.to_html(this.template, data));
       new ActiveButton(this.el);
       return this;
     },
     goToDetails : function(evt) {
-      evt.preventDefault();
-      if (this.model.get('link') === 'true') {
-        if (this.model.get('target') === '') {
-          plogApp.router.navigate('details/' + this.model.id, true);
-        } else {
-          window.open(this.model.get('target'), '_blank');
-        }
+      var navigate = this.model.get('link') === 'true' &&
+        this.model.get('target') === '';
+      if (navigate) {
+        evt.preventDefault();
+        plogApp.router.navigate('details/' + this.model.id, true);
+        return false;
       }
-      return false;
     }
   });
 });

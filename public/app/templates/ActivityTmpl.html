@@ -1,9 +1,15 @@
 <div {{#hasLink}}class="arrow"{{/hasLink}}>
   <div class="actityTitle">
+    {{#hasTarget}}
+      <a href="{{target}}" rel="external" target="_blank">
+    {{/hasTarget}}
     {{#hasLogo}}
       <span class="isLogo">{{logo}}</span>&nbsp;
     {{/hasLogo}}
     {{title}}
+    {{#hasTarget}}
+      </a>
+    {{/hasTarget}}
   </div>
   <div class="actityDate">{{date}}</div>
 </div>
