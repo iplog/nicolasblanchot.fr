@@ -12,7 +12,6 @@ exports.index = function(req, res) {
     }
   };
 
-console.log(req.headers['user-agent']);
   // check if classic smartphone or blackberry
   var isSmartphone = phoneRgx.test(req.headers['user-agent'].toLowerCase());
   var isNotSupported = notSupportedRgx.test(
