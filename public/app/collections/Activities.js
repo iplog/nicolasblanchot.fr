@@ -1,9 +1,11 @@
 define([
+  'collections/AppCollection',
   'models/Activity'
 ], function(
+  AppCollection,
   Activity
 ) {
-  return Backbone.Collection.extend({
+  return AppCollection.extend({
     model: Activity,
     url: '/activities'
   });

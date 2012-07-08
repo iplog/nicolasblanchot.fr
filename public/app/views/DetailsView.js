@@ -7,9 +7,6 @@ define([
 ) {
   return Backbone.View.extend({
     el: '#appContainer',
-    tagName : 'div',
-    id : 'details',
-    className : 'viewWrapper',
     events : {},
     template : Tmpl,
     initialize : function() {

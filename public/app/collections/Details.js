@@ -1,9 +1,11 @@
 define([
+  'collections/AppCollection',
   'models/Category'
 ], function(
+  AppCollection,
   Category
 ) {
-  return Backbone.Collection.extend({
+  return AppCollection.extend({
     model: Category,
     url: '/details'
   });

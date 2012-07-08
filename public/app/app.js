@@ -30,9 +30,13 @@ define([
     if (domIsReady && config.webapp ||
       domIsReady && deviceIsReady
     ) {
+      // initialize app
       $.initialize(config);
+
+      // create router
       plogApp.router = new ApplicationRouter();
 
+      // start history
       return Backbone.history.start();
     }
     return false;
