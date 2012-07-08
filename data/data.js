@@ -260,6 +260,15 @@ var activities = [{
   logo : 'l',
   cat: 5,
   description : ''
+}, , {
+  id: 28,
+  date : '',
+  title : 'Email',
+  link : true,
+  target : 'mailto:nicolasblanchot@gmail.com',
+  logo : '@',
+  cat: 5,
+  description : ''
 }];
 exports.activities = activities;
 
