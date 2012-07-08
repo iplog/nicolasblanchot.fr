@@ -1,5 +1,6 @@
 // thanks to http://detectmobilebrowsers.com/
-var phoneRgx = /android.+mobile|bada\/|blackberry|iemobile|ip(hone|od)|kindle|opera m(ob|in)i|palm( os)?|phone|windows (ce|phone)/i;
+var phoneRgx = /android.+mobile|bada\/|iemobile|ip(hone|od)|kindle|opera m(ob|in)i|palm( os)?|phone|windows (ce|phone)/i;
+var notSupportedRgx = /blackberry|msie/i;
 /**
  * GET home page.
  */
@@ -11,12 +12,21 @@ exports.index = function(req, res) {
     }
   };
 
-  // check if classic smartphone
+console.log(req.headers['user-agent']);
+  // check if classic smartphone or blackberry
   var isSmartphone = phoneRgx.test(req.headers['user-agent'].toLowerCase());
+  var isNotSupported = notSupportedRgx.test(
+    req.headers['user-agent'].toLowerCase()
+  );
+
   var loadFullscreen = !isSmartphone && !req.query['no_check'];
 
   if (loadFullscreen) {
     data.layout = 'demo_layout';
+  } else if (isNotSupported) {
+    data.layout = 'error_layout';
+    res.render('not_supported', data);
+    return;
   }
 
   res.render('index', data);

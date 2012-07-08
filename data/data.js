@@ -192,7 +192,7 @@ var activities = [{
   id: 20,
   date : '2008 - 2010',
   title : 'Baobab',
-  link : false,
+  link : true,
   target : '',
   logo : '',
   cat: 4,
