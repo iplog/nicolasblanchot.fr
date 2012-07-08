@@ -10,7 +10,12 @@ define([
     events : {},
     template : Tmpl,
     initialize : function() {
-      _.bindAll(this, 'render', 'getActivitiesSuccess', 'appendActivity');
+      _.bindAll(
+        this,
+        'render',
+        'getActivitiesSuccess',
+        'appendActivity'
+      );
     },
     render : function() {
       var data = {
@@ -18,6 +23,13 @@ define([
       };
       this.$el.html(Mustache.to_html(this.template, data));
       $.setupScroll(this.$el);
+
+      // create a fast back button
+      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
+
+      return this;
+    },
+    getData : function() {
       if (this.collection.length === 0) {
         this.collection.fetch({
           data : {
@@ -29,20 +41,16 @@ define([
       } else {
         this.getActivitiesSuccess(this.collection);
       }
-
-      // create a fast back button
-      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
-
-      return this;
     },
-    getActivitiesSuccess : function(collection) {
+    getActivitiesSuccess : function(collection, message) {
+      this.render();
       this.docFragment = document.createDocumentFragment();
       _.each(collection.models, this.appendActivity);
       this.$el.find('ul').append(this.docFragment);
       $.refreshScroll(this.$el);
     },
-    getActivitiesError : function() {
-      alert('Cannot connect to server');
+    getActivitiesError : function(collection, message) {
+      window.history.back();
     },
     appendActivity : function(activity, ind) {
       var view = new ActivityView({

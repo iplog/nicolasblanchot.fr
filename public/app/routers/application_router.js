@@ -49,7 +49,7 @@ define([
           title : category.get('name').toLowerCase()
         });
       }
-      return plogApp.activitiesView.render();
+      return plogApp.activitiesView.getData();
     },
     details : function(id) {
       if (!plogApp.categories || !plogApp.activities) {
@@ -70,7 +70,7 @@ define([
           activityId : activity.get('id')
         });
       }
-      return plogApp.detailsView.render();
+      return plogApp.detailsView.getData();
     }
   });
   return Router;

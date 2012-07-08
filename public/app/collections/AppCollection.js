@@ -18,8 +18,10 @@ define([
       }
       if (options.error) {
         newOptions.error = function(collection, message) {
-          plogApp.loadingNotifier.setErrorMode();
-          options.error(collection, message);
+          var callback = function() {
+            options.error(collection, message);
+          };
+          plogApp.loadingNotifier.setErrorMode(callback);
         };
       }
       plogApp.loadingNotifier.render();

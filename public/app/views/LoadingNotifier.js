@@ -17,6 +17,10 @@ define([
       this.$el.find('#loadingNotifierTopError').hide();
       this.$el.find('#loadingNotifierMiddle').hide();
 
+      // clean callback
+      this.callback = undefined;
+
+      // display box
       this.$el.fadeIn(150);
 
       // create a fast back button
@@ -26,7 +30,12 @@ define([
       );
       return this;
     },
-    setErrorMode : function() {
+    setErrorMode : function(cb) {
+      // set callback
+      if (cb) {
+        this.callback = cb;
+      }
+      // modify box content
       this.$el.children('#loadingNotifier').removeClass('loading');
       this.$el.find('#loadingNotifierTop').hide();
       this.$el.find('#loadingNotifierTopError').show();
@@ -37,6 +46,9 @@ define([
     },
     hideContainer : function () {
       this.$el.hide();
+      if (this.callback) {
+        this.callback();
+      }
     }
   });
 });

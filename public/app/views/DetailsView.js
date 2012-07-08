@@ -10,7 +10,13 @@ define([
     events : {},
     template : Tmpl,
     initialize : function() {
-      _.bindAll(this, 'render', 'getDetailsSuccess', 'appendDetail');
+      _.bindAll(
+        this,
+        'render',
+        'getDetailsSuccess',
+        'getDetailsError',
+        'appendDetail'
+      );
     },
     render : function() {
       var data = {
@@ -23,6 +29,12 @@ define([
       // hide arrow box
       this.$el.find('ul').hide();
 
+      // create a fast back button
+      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
+
+      return this;
+    },
+    getData : function() {
       // refresh scroll
       $.setupScroll(this.$el);
 
@@ -39,12 +51,9 @@ define([
         this.getDetailsSuccess(this.collection);
       }
 
-      // create a fast back button
-      new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
-
-      return this;
     },
-    getDetailsSuccess : function(collection) {
+    getDetailsSuccess : function(collection, message) {
+      this.render();
       this.docFragment = document.createDocumentFragment();
       if (collection.length > 0) {
         this.$el.find('ul').show();
@@ -53,8 +62,8 @@ define([
         $.refreshScroll(this.$el);
       }
     },
-    getDetailsError : function() {
-      alert('Cannot connect to server');
+    getDetailsError : function(collection, message) {
+      window.history.back();
     },
     appendDetail : function(detail, ind) {
       var view = new DetailView({
