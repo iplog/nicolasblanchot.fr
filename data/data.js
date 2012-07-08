@@ -507,5 +507,13 @@ var details = [{
   id: 55,
   activityId: 21,
   text: 'Technology watch'
+}, {
+  id: 56,
+  activityId: 20,
+  text: 'PHP development'
+}, {
+  id: 57,
+  activityId: 20,
+  text: 'Database architecture'
 }];
 exports.details = details;

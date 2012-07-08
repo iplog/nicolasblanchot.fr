@@ -32,12 +32,12 @@ define([
       // create a fast back button
       new google.ui.FastButton(this.$el.find('.back').get(0), this.back);
 
-      return this;
-    },
-    getData : function() {
       // refresh scroll
       $.setupScroll(this.$el);
 
+      return this;
+    },
+    getData : function() {
       // get data
       if (this.collection.length === 0) {
         this.collection.fetch({

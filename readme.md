@@ -13,7 +13,9 @@ The webapp part could be easily used in a PhoneGap project to ceate a mobile app
 ## Language
 The whole project is written in JavaScript, HTML and CSS.
 
-## Frameworks and tools
+## Database, frameworks and tools
+Database: Redis (for fun)
+
 JavaScript:
 
 - nodejs (v0.6.18)
@@ -33,6 +35,8 @@ CSS and fonts:
 - lesscss (v1.3.0)
 - Jenna Sue font
 - Web Symbols typeface
+
+Hosting: Heroku
 
 ## Custom tools
 There is a build.sh command line tool and script named less_compiler.js in ./dev/ folder.
