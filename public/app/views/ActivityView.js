@@ -18,6 +18,24 @@ define([
       data.hasLink = this.model.get('link') === 'true';
       data.hasLogo = this.model.get('logo') !== '';
       data.hasTarget = this.model.get('target') !== '';
+      data.setLogo = function () {
+        return function (text, render) {
+          var ret;
+          switch (text.length) {
+            case 0:
+              ret = '';
+              break;
+            case 1:
+              ret = '<span class="isLogo">' + render(text) + '</span>&nbsp;';
+              break;
+            default:
+              ret = '<img src="' + render(text) + '" />';
+              break;
+          }
+          return ret;
+        };
+      };
+
 
       this.$el.html(Mustache.to_html(this.template, data));
       new ActiveButton(this.el);

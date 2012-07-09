@@ -266,7 +266,7 @@ var activities = [{
   title : 'Github',
   link : true,
   target : 'https://github.com/iplog/',
-  logo : 'H',
+  logo : 'images/gitHubCat.png',
   cat: 5,
   description : ''
 }, {
