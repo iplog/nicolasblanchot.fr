@@ -1,4 +1,4 @@
-var conn = require('./redis').inst;
+var conn = require('./redis').conn;
 var data = require('../data/data');
 
 exports.createData = function() {

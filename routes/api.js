@@ -1,4 +1,4 @@
-var conn = require('./../tools/redis').inst;
+var conn = require('./../tools/redis').conn;
 
 /*
  * GET categories.
