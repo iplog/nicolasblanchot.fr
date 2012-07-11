@@ -190,7 +190,7 @@ var activities = [{
   description : 'Managed the ESCP Europe musical club'
 }, {
   id: 20,
-  date : '2008 - 2010',
+  date : '2007 - 2010',
   title : 'Baobab',
   link : true,
   target : '',
