@@ -43,7 +43,7 @@ var activities = [{
   target : '',
   logo : '',
   cat: 0,
-  description : 'Excel and VBA teacher assistant and in charge of training session for students.'
+  description : 'In charge of training sessions for students: Excel and VBA'
 }, {
   id: 4,
   date : 'Feb 2009 - Jul 2009',
