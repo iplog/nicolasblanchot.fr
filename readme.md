@@ -29,6 +29,9 @@ JavaScript:
 - requirejs (v2.0.1) (optimized with r.j and almond.js)
 - iScroll4 (v4.1.9)
 - add2home (v2.0.1)
+- jasmine (1.2.0)
+- jasmine-jquery (v1.3.1)
+- rosie (no version number, see [https://github.com/bkeepers/rosie](https://github.com/bkeepers/rosie))
 
 CSS and fonts:
 
@@ -60,5 +63,6 @@ The less_compiler file allows you to monitor your .less files modifications and 
     $ node less_compiler.js
 
 ## What's next
-I'd like to add some Unit test using Jasmine or Mocha and some CSS3 animation for page transitions.
-
+- Finish to test the app with jasmine
+- Add some CSS3 animation for page transitions.
+- Support for Windows phone
