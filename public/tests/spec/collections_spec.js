@@ -40,6 +40,10 @@ define([
         // how many are there in total now?
         expect(collection.length).toBe(3);
     });
+
+    it('Should fetch data on a specific URL', function() {
+      expect(collection.url).toBe('/categories');
+    });
   });
 
   describe('Tests activities collection', function() {
@@ -74,6 +78,9 @@ define([
         // how many are there in total now?
         expect(collection.length).toBe(3);
     });
+    it('Should fetch data on a specific URL', function() {
+      expect(collection.url).toBe('/activities');
+    });
   });
 
 
@@ -105,6 +112,9 @@ define([
 
         // how many are there in total now?
         expect(collection.length).toBe(4);
+    });
+    it('Should fetch data on a specific URL', function() {
+      expect(collection.url).toBe('/details');
     });
   });
 });

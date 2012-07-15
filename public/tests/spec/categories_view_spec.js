@@ -5,8 +5,9 @@ define([
 ], function(CategoriesView, Categories) {
 
   describe('Tests for CategoriesView functions', function() {
+    var div;
     beforeEach(function() {
-      var div = $('<div>').attr('id', 'appContainer');
+      div = $('<div>').attr('id', 'appContainer');
       $('body').append(div);
 
       this.collection = new Categories();
@@ -16,17 +17,23 @@ define([
     });
 
     afterEach(function() {
-        this.view.remove();
-        $('ul').remove();
+      div.remove();
+      this.view.remove();
     });
 
-    it('Should be tied to a DOM element when created, based off the property provided.', function() {
+    it('Should be tied to a DOM element when created, based off the property provided', function() {
       //what html element tag name represents this view?
       expect(this.view.el.tagName.toLowerCase()).toBe('div');
       expect(this.view.$el).toHaveId('appContainer');
     });
 
-    it('Is backed by a collection which provides the data.', function() {
+    it('Should return the view object when rendering', function() {
+      spyOn(this.collection, 'fetch').andCallFake(function()  {});
+
+      expect(this.view.render()).toEqual(this.view);
+    });
+
+    it('Should be backed by a collection which provides the data', function() {
       expect(this.view.collection).toBeDefined();
     });
 
