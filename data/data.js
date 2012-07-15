@@ -79,7 +79,7 @@ var activities = [{
   target : '',
   logo : '',
   cat: 1,
-  description: '"Grande Ecole" program, specialization in management with a strong focus on information systems and new technologies'
+  description: '"Grande Ecole" program, with a strong focus on information systems and new technologies'
 }, {
   id: 8,
   date : 'Sep 2004 - Jun 2006',
