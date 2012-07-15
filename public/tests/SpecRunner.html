@@ -22,11 +22,13 @@
       baseUrl : '../app',
       paths: {
         'text' : '../js/requirejs/text',
-        'spec' : '../tests/spec'
+        'spec' : '../tests/spec',
+        'factory' : '../tests/factory'
       },
     });
 
     require([
+      'spec/collections_spec',
       '../js/mustache.js'
     ], function() {
       $(function() {
