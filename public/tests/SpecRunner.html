@@ -28,8 +28,13 @@
     });
 
     require([
-      'spec/collections_spec',
-      '../js/mustache.js'
+      // 'spec/collections_spec',
+      'spec/categories_view_spec',
+      'config',
+      'utils/iphone',
+      'utils/fast_button',
+      '../js/iscroll',
+      '../js/mustache'
     ], function() {
       $(function() {
         var jasmineEnv = jasmine.getEnv();
