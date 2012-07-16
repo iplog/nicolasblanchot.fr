@@ -16,7 +16,7 @@ var activities = [{
   target : '',
   logo : '',
   cat: 0,
-  description : 'Civiliz is a startup which has created a location based feedback service for businesses. It works with companies such as Société Générale, Quick, SNCF or Caisse d’Epargne.'
+  description : 'Civiliz is a French start-up which has created a location based feedback service for businesses. Major clients : Société Générale, Quick, SNCF or Caisse d’Epargne.'
 }, {
   id: 1,
   date : 'Mar 2012',
@@ -70,7 +70,7 @@ var activities = [{
   target : '',
   logo : '',
   cat: 1,
-  description : 'Second year of MSc Specialization in “Information Technology”, especially in software conception and computer programming.'
+  description : 'Second year of MSc. Specialization in “Information Technology”, especially in software conception and computer programming.'
 }, {
   id: 7,
   date : 'Sep 2006 - Jul 2010',
