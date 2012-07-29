@@ -62,7 +62,50 @@ The less_compiler file allows you to monitor your .less files modifications and 
 
     $ node less_compiler.js
 
+## How to run the app
+### Install nodejs and npm 
+Go to [nodejs](http://nodejs.org) website for further information.
+
+### Install redis server
+[redis website](http://redis.io/download)
+
+### Install a useful node module
+If you do not already use a module to rerun your js file whenever there's a change in the current directory you should install something like run and never alt-tab to your terminal again ;)
+
+    $ sudo npm install -g run
+
+### Launch the app
+1. Start redis-server in a new terminal window
+
+        $ cd <path_to_project>
+        $ redis-server
+        
+    Redis is going to log in this window.
+    
+2. Start node server in another new terminal window
+
+        $ cd <path_to_project>
+        $ runjs app.js
+
+    Node server is going to log in this window. You should see a message saying to you that node has launched a webserver on : localhost:<port_number> 
+
+    Now you can go to your web browser and open http://localhost:<port_number> and try the app.
+    
+### Run the already written basic tests
+If you use Safari as primary browser just open the SpecRunner.html file in `public/tests` folder.
+
+If you prefer use chrome, you have to start an http server before loading this file in order to avoid *cross origin requests policy* restrictions. You can either use an apache server or create a new server using this python command:
+    
+    $ cd <path_to_project>
+    $ cd public
+    $ python -m SimpleHTTPServer 8000
+    
+It will start a new simple http server on port 8000. Then go to your browser and load this page:
+
+http://localhost:8000/tests/SpecRunner.html
+
 ## What's next
 - Finish to test the app with jasmine
-- Add some CSS3 animation for page transitions.
+- Use Rosie factory objects to create the DB
+- Add some CSS3 animation for page transitions
 - Support for Windows phone
