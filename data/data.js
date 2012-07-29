@@ -84,7 +84,7 @@ var activities = [{
   id: 8,
   date : 'Sep 2004 - Jun 2006',
   title : 'Lycée Henri IV, Classes préparatoires ECS – Paris, France',
-  link : false,
+  link : true,
   target : '',
   logo : '',
   cat: 1,
@@ -490,7 +490,7 @@ var details = [{
 }, {
   id: 51,
   activityId: 21,
-  text: 'Play the bass guitar'
+  text: 'Bass guitar'
 }, {
   id: 52,
   activityId: 21,
@@ -515,5 +515,9 @@ var details = [{
   id: 57,
   activityId: 20,
   text: 'Database architecture'
+}, {
+  id: 58,
+  activityId: 8,
+  text: 'French preparatory school for competitive exams in French business schools (Grandes écoles).'
 }];
 exports.details = details;
